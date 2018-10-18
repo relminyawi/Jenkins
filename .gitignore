@@ -1,7 +1,6 @@
 # gitignore file based on https://www.coveros.com/version-control-your-jenkins-server-configuration-with-git/
 # not everything in this file exists in our version of Jenkins
 
-
 # Only get the config.xml from any Jobs directory
 jobs/*/builds
 jobs/*/modules
