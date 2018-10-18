@@ -1,0 +1,42 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<flow-definition plugin="workflow-job@2.26">
+  <actions>
+    <org.jenkinsci.plugins.pipeline.modeldefinition.actions.DeclarativeJobAction plugin="pipeline-model-definition@1.3.2"/>
+    <org.jenkinsci.plugins.pipeline.modeldefinition.actions.DeclarativeJobPropertyTrackerAction plugin="pipeline-model-definition@1.3.2">
+      <jobProperties/>
+      <triggers/>
+      <parameters/>
+      <options/>
+    </org.jenkinsci.plugins.pipeline.modeldefinition.actions.DeclarativeJobPropertyTrackerAction>
+  </actions>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <definition class="org.jenkinsci.plugins.workflow.cps.CpsScmFlowDefinition" plugin="workflow-cps@2.58">
+    <scm class="hudson.scm.SubversionSCM" plugin="subversion@2.12.1">
+      <locations>
+        <hudson.scm.SubversionSCM_-ModuleLocation>
+          <remote>https://openproj.spacemicro.com/svn/fcl-tech-tm/source/branches/relminyawi/re-096a-fl6385</remote>
+          <credentialsId>9f21a5ce-61e4-4533-a721-40be88311ef1</credentialsId>
+          <local>.</local>
+          <depthOption>infinity</depthOption>
+          <ignoreExternalsOption>true</ignoreExternalsOption>
+          <cancelProcessOnExternalsFail>true</cancelProcessOnExternalsFail>
+        </hudson.scm.SubversionSCM_-ModuleLocation>
+      </locations>
+      <excludedRegions></excludedRegions>
+      <includedRegions></includedRegions>
+      <excludedUsers></excludedUsers>
+      <excludedRevprop></excludedRevprop>
+      <excludedCommitMessages></excludedCommitMessages>
+      <workspaceUpdater class="hudson.scm.subversion.UpdateUpdater"/>
+      <ignoreDirPropChanges>false</ignoreDirPropChanges>
+      <filterChangelog>false</filterChangelog>
+      <quietOperation>false</quietOperation>
+    </scm>
+    <scriptPath>Jenkinsfile.groovy</scriptPath>
+    <lightweight>true</lightweight>
+  </definition>
+  <triggers/>
+  <disabled>false</disabled>
+</flow-definition>
