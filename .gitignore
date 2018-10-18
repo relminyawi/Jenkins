@@ -1,0 +1,64 @@
+# gitignore file based on https://www.coveros.com/version-control-your-jenkins-server-configuration-with-git/
+# not everything in this file exists in our version of Jenkins
+
+# Only get the config.xml from any Jobs directory
+jobs/*/builds
+jobs/*/modules
+jobs/*/htmlreports
+jobs/*/last*
+jobs/*/next*
+jobs/*/*.csv
+jobs/*/*.txt
+jobs/*/*.log
+jobs/*/workspace
+jobs/*/modules
+# Process jobs that exist in folders
+jobs/**/jobs/*/builds
+jobs/**/jobs/*/modules
+jobs/**/jobs/*/htmlreports
+jobs/**/jobs/*/last*
+jobs/**/jobs/*/next*
+jobs/**/jobs/*/*.csv
+jobs/**/jobs/*/*.txt
+jobs/**/jobs/*/*.log
+jobs/**/jobs/*/workspace
+jobs/**/jobs/*/modules
+# Keep .jpi files
+plugins/*/
+# Excluded directories
+jre/
+secrets/
+users/
+userContent/
+war/
+workspace/
+workflow-libs/
+logs/
+nodes/
+terracotta/
+updates/
+fingerprints/
+config-history/
+# Not found in our Jenkins, but figured keep in .gitignore
+.m2/
+.ivy2/
+.sbt/
+.ssh/
+.emacs.d/
+.gitconfig
+.viminfo
+.bash_history
+# Don't want any file of these types
+*.log
+*.tmp
+*.old
+*.bak
+*.jar
+*.swp
+.owner
+# Contains local info and secrets; don’t want this in Git
+jenkins.model.JenkinsLocationConfiguration.xml
+jenkins.mvn.GlobalMavenConfig.xml
+credentials.xml
+secret.key*
+identity.key*
